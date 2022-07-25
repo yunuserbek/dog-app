@@ -30,7 +30,7 @@ class DogFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         backgroundAnimation()
         getSetImage()
-        binding.floatingActionButton.setOnClickListener {
+        binding.randomButton.setOnClickListener {
             viewModel.getDogImage()
         }
 

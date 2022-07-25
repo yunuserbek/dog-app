@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentDog"
@@ -7,27 +7,30 @@
     android:background="@drawable/gradient_list"
     tools:context=".ui.MainActivity">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="26dp"
-        android:backgroundTint="#FFFFFF"
-        android:clickable="true"
-        android:focusable="true"
-        android:tint="#FFFFFF"
-        app:rippleColor="#FFFFFF"
-        app:srcCompat="@android:drawable/stat_notify_sync" />
 
+
+    <ImageButton
+        android:id="@+id/randomButton"
+        android:layout_width="111dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/dog_paw"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="10dp"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
     <com.agrawalsuneet.dotsloader.loaders.LazyLoader
         android:id="@+id/dots_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="20dp"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:lazyloader_animDur="400"
         app:lazyloader_dotsDist="10dp"
         app:lazyloader_dotsRadius="7dp"
@@ -44,6 +47,10 @@
         android:layout_height="500dp"
         android:layout_centerInParent="true"
         android:layout_margin="0dp"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
